@@ -5,6 +5,8 @@ import Header from "./Header";
 import About from "./About";
 import Categories from "./Categories";
 import Category from "./Category";
+import Register from "./Register";
+import Confirmation from "./Confirmation";
 
 
 function App() {
@@ -19,6 +21,9 @@ function App() {
 
         <Route path="Home" element={<Home />} />
         <Route path="About" element={<About />} />
+        <Route path="register" element={<Register/>} />
+        <Route path="confirmed" element={<Confirmation/>} />
+
       </Routes>
       <footer className="container">
         &copy;2022 | <a href="https://red30tech.com/">Red30 Tech</a>

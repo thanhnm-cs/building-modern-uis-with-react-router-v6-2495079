@@ -1,10 +1,18 @@
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate()
   const emailRef = useRef(null);
-
+  let log = ""
   function handleSubmit(event) {
     event.preventDefault();
+    if (emailRef.current.value === "asd") { //compare feel stupid I will handle it later 
+      navigate("/confirmed", { state: { email: emailRef.current.value } });
+    } else {
+      navigate("/register", { state: { email: emailRef.current.value } });
+    }
+
   }
 
   return (
